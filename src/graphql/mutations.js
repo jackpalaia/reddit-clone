@@ -1,75 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = /* GraphQL */ `
-  mutation CreateBlog(
-    $input: CreateBlogInput!
-    $condition: ModelBlogConditionInput
-  ) {
-    createBlog(input: $input, condition: $condition) {
-      id
-      name
-      posts {
-        items {
-          id
-          title
-          blogID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateBlog = /* GraphQL */ `
-  mutation UpdateBlog(
-    $input: UpdateBlogInput!
-    $condition: ModelBlogConditionInput
-  ) {
-    updateBlog(input: $input, condition: $condition) {
-      id
-      name
-      posts {
-        items {
-          id
-          title
-          blogID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteBlog = /* GraphQL */ `
-  mutation DeleteBlog(
-    $input: DeleteBlogInput!
-    $condition: ModelBlogConditionInput
-  ) {
-    deleteBlog(input: $input, condition: $condition) {
-      id
-      name
-      posts {
-        items {
-          id
-          title
-          blogID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const createPost = /* GraphQL */ `
   mutation CreatePost(
     $input: CreatePostInput!
@@ -78,28 +9,16 @@ export const createPost = /* GraphQL */ `
     createPost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
+      content
+      owner
       comments {
         items {
           id
           postID
           content
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -111,28 +30,16 @@ export const updatePost = /* GraphQL */ `
     updatePost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
+      content
+      owner
       comments {
         items {
           id
           postID
           content
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -144,28 +51,16 @@ export const deletePost = /* GraphQL */ `
     deletePost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
-        id
-        name
-        posts {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
+      content
+      owner
       comments {
         items {
           id
           postID
           content
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -180,22 +75,13 @@ export const createComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
+        content
+        owner
         comments {
           nextToken
         }
-        createdAt
-        updatedAt
       }
       content
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -210,22 +96,13 @@ export const updateComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
+        content
+        owner
         comments {
           nextToken
         }
-        createdAt
-        updatedAt
       }
       content
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -240,22 +117,13 @@ export const deleteComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
-          id
-          name
-          createdAt
-          updatedAt
-        }
+        content
+        owner
         comments {
           nextToken
         }
-        createdAt
-        updatedAt
       }
       content
-      createdAt
-      updatedAt
     }
   }
 `;
